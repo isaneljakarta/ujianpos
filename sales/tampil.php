@@ -4,6 +4,25 @@
         <a href="?m=sales&s=add" class="btn btn-success btn-sm">+ Tambah Sales</a>
     </div>
     <div class="card-body">
+        <?php if (isset($_GET['msg'])) : ?>
+            <?php if ($_GET['msg'] == 'added') : ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Berhasil!</strong> Data sales baru telah ditambahkan.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php elseif ($_GET['msg'] == 'updated') : ?>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Berhasil!</strong> Data sales telah diperbarui.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php elseif ($_GET['msg'] == 'deleted') : ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Berhasil!</strong> Data sales telah dihapus.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
+        <?php endif; ?>
+
         <div class="table-responsive">
             <table class="table table-bordered table-hover align-middle mb-0">
                 <thead class="table-light">

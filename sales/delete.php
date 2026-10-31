@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
     $result = mysqli_query($con, $sql);
 
     if ($result) {
-        echo "<script>window.location.href='?m=sales';</script>";
+        echo "<script>alert('Data sales berhasil dihapus!'); window.location.href='?m=sales&msg=deleted';</script>";
     } else {
         echo "<script>alert('Gagal menghapus data sales!'); window.location.href='?m=sales';</script>";
     }

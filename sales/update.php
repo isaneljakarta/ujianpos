@@ -9,7 +9,7 @@ if (isset($_POST['update'])) {
     $result = mysqli_query($con, $sql);
 
     if ($result) {
-        echo "<script>window.location.href='?m=sales';</script>";
+        echo "<script>alert('Data sales berhasil diupdate!'); window.location.href='?m=sales&msg=updated';</script>";
     } else {
         echo "<script>alert('Gagal mengupdate data sales!'); window.location.href='?m=sales&s=edit&id=$id';</script>";
     }

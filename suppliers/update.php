@@ -11,7 +11,7 @@ if (isset($_POST['update'])) {
     $result = mysqli_query($con, $sql);
 
     if ($result) {
-        echo "<script>window.location.href='?m=suppliers';</script>";
+        echo "<script>alert('Data supplier berhasil diupdate!'); window.location.href='?m=suppliers&msg=updated';</script>";
     } else {
         echo "<script>alert('Gagal mengupdate data supplier!'); window.location.href='?m=suppliers&s=edit&id=$id';</script>";
     }

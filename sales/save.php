@@ -8,9 +8,9 @@ if (isset($_POST['simpan'])) {
     $result = mysqli_query($con, $sql);
 
     if ($result) {
-        echo "<script>window.location.href='?m=sales';</script>";
+        echo "<script>alert('Data sales berhasil ditambahkan!'); window.location.href='?m=sales&msg=added';</script>";
     } else {
-        echo "<script>alert('Gagal menyimpan data sales! Pastikan sudah memilih Supplier.'); window.location.href='?m=sales&s=add';</script>";
+        echo "<script>alert('Gagal menyimpan data sales!'); window.location.href='?m=sales&s=add';</script>";
     }
 }
 ?>
